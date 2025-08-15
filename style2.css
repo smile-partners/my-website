@@ -1,0 +1,238 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+header {
+  background-color: #004466;
+  color: white;
+  padding: 20px;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #eee;
+  font-size: 0.9em;
+}
+
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+  margin-top: 1.5em;
+}
+
+.service-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 1.5em;
+  text-align: center;
+  border: 1px solid #ddd;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.service-card svg {
+  margin-bottom: 0.5em;
+}
+
+.service-card h2 {
+  color: #2c5b8f;
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+
+
+.btn-contact {
+  display: inline-block;
+  background-color: #2c5b8f; /* 落ち着いたブルー */
+  color: white;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.btn-contact:hover {
+  background-color: #1f4169; /* 濃いめのブルー */
+  transform: translateY(-2px); /* 少し浮く */
+}
+
+
+
+/* セクション全体 */
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  padding: 4em 1em;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 白カードセクション */
+.section {
+  background-color: #ffffff;
+  padding: 2em 1.5em;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.8em;
+  color: #2c5b8f;
+}
+
+.section p {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 1.5em;
+}
+
+/* 詳しくはこちらボタン */
+.link-btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #2c5b8f;
+  font-weight: 500;
+  position: relative;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.link-btn::after {
+  content: "→";
+  display: inline-block;
+  margin-left: 5px;
+  transition: transform 0.3s;
+}
+
+.link-btn:hover {
+  transform: translateY(-3px);
+  color: #1f4169;
+}
+
+.link-btn:hover::after {
+  transform: translateX(4px);
+}
+
+/* 無料相談セクション */
+.contact-section {
+  display: inline-block; /* 幅を文字に合わせる */
+  background-color: #f0f4ff;
+  color: white;
+  padding: 1em 2em;
+  border-radius: 8px;
+  text-align: center;
+  margin: 3em auto 0 auto; /* 上下マージンと左右中央 */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* 軽い浮き上がり効果 */
+}
+
+.contact-section p {
+  margin: 0 0 1em 0;
+  color: black;
+  font-weight: 400;
+}
+
+/* ポップアウトボタン */
+.link-btn-primary {
+  display: inline-block;
+  padding: 0.8em 2em;
+  background-color: #2c5b8f;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.link-btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.25);
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+  .sections {
+    padding: 2em 1em;
+  }
+
+  .section {
+    padding: 1.5em 1em;
+  }
+
+  .section h2 {
+    font-size: 1.3em;
+  }
+
+  .contact-section {
+    padding: 1em 1.5em;
+  }
+}
+
+.hero-text {
+  background-color: #f8f8f8;
+  padding: 5em 1em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5em;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Georgia', serif; /* 上品な印象 */
+}
+
+.hero-text h1 {
+  font-size: 2.2em;
+  color: #2c5b8f;
+  margin-bottom: 0.5em;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.hero-text p {
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.5;
+  font-style: italic; /* 少し優雅に */
+}
+
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 1.8em;
+  }
+  .hero-text p {
+    font-size: 1em;
+  }
+}

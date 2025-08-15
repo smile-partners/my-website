@@ -28,3 +28,138 @@ footer {
   background-color: #eee;
   font-size: 0.9em;
 }
+
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+  margin-top: 1.5em;
+}
+
+.service-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 1.5em;
+  text-align: center;
+  border: 1px solid #ddd;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.service-card svg {
+  margin-bottom: 0.5em;
+}
+
+.service-card h2 {
+  color: #2c5b8f;
+  font-size: 1.2rem;
+  margin-bottom: 0.5em;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.btn-contact {
+  display: inline-block;
+  background-color: #2c5b8f; /* 落ち着いたブルー */
+  color: white;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.btn-contact:hover {
+  background-color: #1f4169; /* 濃いめのブルー */
+  transform: translateY(-2px); /* 少し浮く */
+}
+
+
+
+
+main h2 {
+  font-size: 1.8em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid #2c5b8f; /* 見出しの下線 */
+  padding-bottom: 0.3em;
+}
+
+main h3 {
+  font-size: 1.3em;
+  margin-top: 1.2em;
+  color: #2c5b8f; /* 見出しカラーを統一 */
+}
+
+main ul {
+  margin-left: 1.2em;
+  list-style-type: disc;
+}
+
+main section + section {
+  margin-top: 1.5em;
+}
+
+.separator {
+  border: none;           /* デフォルトの線を消す */
+  border-top: 2px solid #2c5b8f;  /* 色と太さを指定 */
+  margin: 2em 0;          /* 上下の余白 */
+  width: 100%;             /* 線の長さを調整 */
+}
+
+
+
+.contact-box {
+  text-align: center;           
+  background-color: #f0f4ff;    
+  padding: 2em 1em;             
+  border-radius: 10px;          
+  margin: 3em auto;             
+  max-width: 500px;             
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.contact-box p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+
+.btn-contact {
+  display: inline-block;
+  background-color: #2c5b8f;
+  color: white;
+  padding: 0.6em 1.2em;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.btn-contact:hover {
+  background-color: #1f4169;
+  transform: translateY(-2px);
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+  .contact-box {
+    padding: 1.5em 1em;     /* 余白を少し狭く */
+    margin: 2em 1em;        /* 横余白を画面端に合わせる */
+  }
+
+  .contact-box p {
+    font-size: 1.1em;       /* 文字を少し小さく */
+  }
+
+  .btn-contact {
+    padding: 0.5em 1em;     /* ボタンサイズ調整 */
+    font-size: 1em;
+  }
+}
