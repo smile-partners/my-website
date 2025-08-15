@@ -19,21 +19,21 @@
   </header>
 
   <main class="sections">
-    <div class="hero-text">
+    <div class="hero-text scroll-fade">
     <h1>ようこそ、スマイルパートナーズへ</h1>
     <p>私たちは会計・税務・コンサルティングを通じて、<br>
       お客様のビジネスと生活をサポートする会社です。</p>
     </div>
   
   <!-- サービスセクション -->
-  <section class="section">
+  <section class="section scroll-fade">
     <h2>サービス</h2>
     <p>会計・税務サポートやコンサルティングなど、幅広い業務を行っております。</p>
     <a href="business.html" class="link-btn">詳しくはこちら</a>
   </section>
 
   <!-- 事務所案内セクション -->
-  <section class="section">
+  <section class="section scroll-fade">
     <h2>事務所案内</h2>
     <p>お客様のスマイルの架け橋となりたい――そんな願いを込めて会社を設立しました。<br>
     銀行やコンサルティング会社での業務実績があります。</p>
@@ -41,19 +41,37 @@
   </section>
 
   <!-- 無料相談セクション -->
-  <section class="contact-section">
+  <section class="contact-section scroll-fade">
     <p>初めての方でも安心。まずはお気軽にお問い合わせください。</p>
     <a href="contact.html" class="link-btn-primary">無料相談はこちら</a>
   </section>
 </main>
-
-
- 
-
-
 
   <footer>
     <p>&copy; 2025 株式会社スマイルパートナーズ</p>
   </footer>
 </body>
 </html>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const faders = document.querySelectorAll('.scroll-fade');
+
+  const appearOptions = {
+    threshold: 0.2, // 画面に20%見えたら
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target); // 一度表示したら監視解除
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+});
+</script>

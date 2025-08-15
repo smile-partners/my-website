@@ -223,7 +223,6 @@ footer {
   font-size: 1.2em;
   color: #555;
   line-height: 1.5;
-  font-style: italic; /* 少し優雅に */
 }
 
 
@@ -235,4 +234,17 @@ footer {
   .hero-text p {
     font-size: 1em;
   }
+}
+
+/* 初期状態は少し下に下がって透明 */
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+/* スクロールで表示させる時のクラス */
+.scroll-fade.show {
+  opacity: 1;
+  transform: translateY(0);
 }
