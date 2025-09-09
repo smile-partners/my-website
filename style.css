@@ -8,12 +8,12 @@ body {
 
 header {
   background-color: #90ee90;
-  color: white;
+  color: #00552e;
   padding: 20px;
 }
 
 nav a {
-  color: white;
+  color: #00552e;
   margin: 0 10px;
   text-decoration: none;
 }
